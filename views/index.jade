@@ -3,7 +3,7 @@ extends layout
 block content
     h1= title
     p Welcome to our test
-
+    button#btnAddUser_popup Add User
     // Wrapper
     #wrapper
 
@@ -36,20 +36,21 @@ block content
         // /USER LIST
         //ADD USER
     
-    h2 Add User
+    
 
     #addUser
-        fieldset
-            input#inputUserName(type='text', placeholder='Username')
-            input#inputUserEmail(type='text', placeholder='Email')
-            br
-            input#inputUserFullname(type='text', placeholder='Full Name')
-            input#inputUserAge(type='text', placeholder='Age')
-            br
-            input#inputUserLocation(type='text', placeholder='Location')
-            input#inputUserGender(type='text', placeholder='gender')
-            br
-            button#btnAddUser Add User
+        h2 Add new user
+            fieldset
+                input#inputUserName(type='text', placeholder='Username')
+                input#inputUserEmail(type='text', placeholder='Email')
+                br
+                input#inputUserFullname(type='text', placeholder='Full Name')
+                input#inputUserAge(type='text', placeholder='Age')
+                br
+                input#inputUserLocation(type='text', placeholder='Location')
+                input#inputUserGender(type='text', placeholder='gender')
+                br
+                button#btnAddUser Add User
     // /ADD USER
 
     // /WRAPPER

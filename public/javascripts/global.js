@@ -7,6 +7,31 @@ $(document).ready(function() {
     populateTable();
 });
 
+// $("#btnAddUser_popup").on('click',popup);
+
+
+// function popup(){
+//     $("#addUser").animate({
+//         left: '250px',
+//         opacity: '0.5',
+//         height: '150px',
+//         width: '150px'
+//     });
+// };
+
+$("#btnAddUser_popup").on('click',
+function(e)  {
+    $('#addUser').fadeIn();
+    e.preventDefault();
+});
+
+$("#addUser").on('click',
+function()  {
+    alert($("#addUser").prop("tagName"));
+    // $('#addUser').fadeOut();
+   
+});
+
 //show user info
 $('#userList table tbody').on('click','td a.linkshowuser',showUserInfo);
 
@@ -110,7 +135,7 @@ function addUser(event){
 
 function deleteUser(){
 
-    event.preventDefault();
+    //event.preventDefault();
 
     var confirmation = confirm('Are you sure to delete this user');
 
