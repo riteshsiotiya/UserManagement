@@ -19,18 +19,24 @@ $(document).ready(function() {
 //     });
 // };
 
-$("#btnAddUser_popup").on('click',
+$("a").on('click',
 function(e)  {
     $('#addUser').fadeIn();
     e.preventDefault();
 });
 
-$("#addUser").on('click',
-function()  {
-    alert($("#addUser").prop("tagName"));
-    // $('#addUser').fadeOut();
-   
+$("#btnCancelAddUser").on('click',
+function(e)  {
+    $('#addUser').fadeOut();
+    e.preventDefault();
 });
+
+// $("#addUser").on('click',
+// function()  {
+//     alert($("#addUser").prop("tagName"));
+//     // $('#addUser').fadeOut();
+   
+// });
 
 //show user info
 $('#userList table tbody').on('click','td a.linkshowuser',showUserInfo);
@@ -129,6 +135,7 @@ function addUser(event){
         alert('Please fill in all fields');
         return false;
     }
+    $('#addUser').fadeOut();
 }
 
 //============================= Delete User ==========================================

@@ -3,7 +3,10 @@ extends layout
 block content
     h1= title
     p Welcome to our test
-    button#btnAddUser_popup Add User
+    //- button#btnAddUser_popup Add User
+    
+    #[a(href='#') Add User]
+
     // Wrapper
     #wrapper
 
@@ -39,18 +42,18 @@ block content
     
 
     #addUser
-        h2 Add new user
+        
             fieldset
+                h2 Add new user
                 input#inputUserName(type='text', placeholder='Username')
                 input#inputUserEmail(type='text', placeholder='Email')
-                br
                 input#inputUserFullname(type='text', placeholder='Full Name')
                 input#inputUserAge(type='text', placeholder='Age')
-                br
                 input#inputUserLocation(type='text', placeholder='Location')
                 input#inputUserGender(type='text', placeholder='gender')
-                br
+                
                 button#btnAddUser Add User
+                button#btnCancelAddUser Cancel
     // /ADD USER
 
     // /WRAPPER
